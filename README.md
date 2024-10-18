@@ -1,1 +1,1 @@
-# jpa-demo
+# spring-boot-demos
