@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Insert 10 customers -->
+    <changeSet id="test-data-1" author="user">
+        <insert tableName="customer">
+            <column name="id" value="1"/>
+            <column name="name" value="Customer 1"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="2"/>
+            <column name="name" value="Customer 2"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="3"/>
+            <column name="name" value="Customer 3"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="4"/>
+            <column name="name" value="Customer 4"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="5"/>
+            <column name="name" value="Customer 5"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="6"/>
+            <column name="name" value="Customer 6"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="7"/>
+            <column name="name" value="Customer 7"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="8"/>
+            <column name="name" value="Customer 8"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="9"/>
+            <column name="name" value="Customer 9"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="10"/>
+            <column name="name" value="Customer 10"/>
+        </insert>
+    </changeSet>
+
+    <!-- Insert 1-5 transactions for each customer -->
+    <changeSet id="test-data-2" author="user">
+        <insert tableName="transaction">
+            <column name="id" value="1"/>
+            <column name="amount" value="100.00"/>
+            <column name="customer_id" value="1"/>
+        </insert>
+        <insert tableName="transaction">
+            <column name="id" value="2"/>
+            <column name="amount" value="200.00"/>
+            <column name="customer_id" value="1"/>
+        </insert>
+        <insert tableName="transaction">
+            <column name="id" value="3"/>
+            <column name="amount" value="300.00"/>
+            <column name="customer_id" value="2"/>
+        </insert>
+        <insert tableName="transaction">
+            <column name="id" value="4"/>
+            <column name="amount" value="150.00"/>
+            <column name="customer_id" value="3"/>
+        </insert>
+        <insert tableName="transaction">
+            <column name="id" value="5"/>
+            <column name="amount" value="50.00"/>
+            <column name="customer_id" value="3"/>
+        </insert>
+        <insert tableName="transaction">
+            <column name="id" value="6"/>
+            <column name="amount" value="400.00"/>
+            <column name="customer_id" value="4"/>
+        </insert>
+        <insert tableName="transaction">
+            <column name="id" value="7"/>
+            <column name="amount" value="250.00"/>
+            <column name="customer_id" value="5"/>
+        </insert>
+        <insert tableName="transaction">
+            <column name="id" value="8"/>
+            <column name="amount" value="300.00"/>
+            <column name="customer_id" value="6"/>
+        </insert>
+        <insert tableName="transaction">
+            <column name="id" value="9"/>
+            <column name="amount" value="120.00"/>
+            <column name="customer_id" value="7"/>
+        </insert>
+        <insert tableName="transaction">
+            <column name="id" value="10"/>
+            <column name="amount" value="90.00"/>
+            <column name="customer_id" value="8"/>
+        </insert>
+    </changeSet>
+
+    <!-- Insert 1-5 purchases for each transaction -->
+    <changeSet id="test-data-3" author="user">
+        <insert tableName="purchase">
+            <column name="id" value="1"/>
+            <column name="item" value="Item A"/>
+            <column name="transaction_id" value="1"/>
+        </insert>
+        <insert tableName="purchase">
+            <column name="id" value="2"/>
+            <column name="item" value="Item B"/>
+            <column name="transaction_id" value="1"/>
+        </insert>
+        <insert tableName="purchase">
+            <column name="id" value="3"/>
+            <column name="item" value="Item C"/>
+            <column name="transaction_id" value="2"/>
+        </insert>
+        <insert tableName="purchase">
+            <column name="id" value="4"/>
+            <column name="item" value="Item D"/>
+            <column name="transaction_id" value="3"/>
+        </insert>
+        <insert tableName="purchase">
+            <column name="id" value="5"/>
+            <column name="item" value="Item E"/>
+            <column name="transaction_id" value="3"/>
+        </insert>
+        <insert tableName="purchase">
+            <column name="id" value="6"/>
+            <column name="item" value="Item F"/>
+            <column name="transaction_id" value="4"/>
+        </insert>
+        <insert tableName="purchase">
+            <column name="id" value="7"/>
+            <column name="item" value="Item G"/>
+            <column name="transaction_id" value="5"/>
+        </insert>
+        <insert tableName="purchase">
+            <column name="id" value="8"/>
+            <column name="item" value="Item H"/>
+            <column name="transaction_id" value="6"/>
+        </insert>
+        <insert tableName="purchase">
+            <column name="id" value="9"/>
+            <column name="item" value="Item I"/>
+            <column name="transaction_id" value="7"/>
+        </insert>
+        <insert tableName="purchase">
+            <column name="id" value="10"/>
+            <column name="item" value="Item J"/>
+            <column name="transaction_id" value="8"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

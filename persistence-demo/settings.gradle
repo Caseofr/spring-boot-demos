@@ -1,0 +1,3 @@
+rootProject.name = 'persistence-demo'
+
+include 'database'
