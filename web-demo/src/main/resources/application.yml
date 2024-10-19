@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: web-dem
+server:
+  port: 8080
+  tomcat:
+    threads:
+      max: 3
