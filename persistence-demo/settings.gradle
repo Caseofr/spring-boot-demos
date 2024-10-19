@@ -1,3 +1,5 @@
 rootProject.name = 'persistence-demo'
 
-include 'database'
+//include 'database'
+//include 'jpa-demo'
+//include 'pojo'

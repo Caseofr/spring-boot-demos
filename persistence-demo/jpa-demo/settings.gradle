@@ -1,0 +1,5 @@
+rootProject.name = 'jpa-demo'
+
+
+include ':pojo'
+project(':pojo').projectDir = new File(settingsDir, '../pojo')
