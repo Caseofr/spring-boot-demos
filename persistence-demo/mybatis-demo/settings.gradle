@@ -1,0 +1,5 @@
+rootProject.name = 'mybatis-demo'
+
+
+include ':pojo'
+project(':pojo').projectDir = new File(settingsDir, '../pojo')
