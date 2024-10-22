@@ -1,5 +1,6 @@
 package code.sample.persistencedemo.jpademo.controller;
 
+import code.sample.persistencedemo.jpademo.repository.CustomerJdbcRepository;
 import code.sample.persistencedemo.jpademo.repository.CustomerRepository;
 import code.sample.persistencedemo.pojo.entity.Customer;
 import code.sample.persistencedemo.pojo.entity.Transaction;
@@ -20,25 +21,17 @@ import java.util.Optional;
 @RestController
 @Slf4j
 @RequiredArgsConstructor
-@RequestMapping("/api")
-public class MyController {
+@RequestMapping("/api2")
+public class DynamicQueryController {
 
-    private final CustomerRepository customerRepository;
+    private final CustomerJdbcRepository customerJdbcRepository;
 
     @GetMapping("/jpa/customers")
     public ResponseEntity<Object> getCustomersUsingJPA() {
         log.info("Fetching all customers using JPA");
-        List<Customer> customers = customerRepository.findAll();
+        List<Customer> customers = customerJdbcRepository.findCustomers(null, 0L);
         log.info("customers: {}", customers.size());
-        fetchTransaction(customers);
-        return ResponseEntity.ok().build();
-    }
-
-    @GetMapping("/jpa/customers/{id}")
-    public ResponseEntity<Object> getCustomersUsingJPA(@PathVariable("id") Long customerId) {
-        Optional<Customer> customer = customerRepository.findById(customerId);
-        log.info("1 customer: {}", customer.get().getName());
-        fetchTransaction(Collections.singletonList(customer.get()));
+//        fetchTransaction(customers);
         return ResponseEntity.ok().build();
     }
 

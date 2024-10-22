@@ -16,3 +16,11 @@ spring:
         jdbc.batch_size: ${HIBERNATE_JDBC_BATCH_SIZE:30}
         order_inserts: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
+    #        format_sql: true
+    show-sql: true
+
+
+#logging:
+#  level:
+#    org.hibernate.SQL: DEBUG
+#    org.hibernate.type.descriptor.sql.BasicBinder: TRACE

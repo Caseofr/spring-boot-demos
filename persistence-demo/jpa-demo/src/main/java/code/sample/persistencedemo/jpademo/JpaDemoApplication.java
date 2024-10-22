@@ -10,8 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan("code.sample.persistencedemo.pojo.entity")
 public class JpaDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(JpaDemoApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(JpaDemoApplication.class, args);
+    }
 }
