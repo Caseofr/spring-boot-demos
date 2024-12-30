@@ -7,4 +7,7 @@
     <select id="findAllCustomers" resultType="code.sample.persistencedemo.pojo.entity.Customer">
         SELECT * FROM customer
     </select>
+    <insert id="saveCustomer" parameterType="code.sample.persistencedemo.pojo.entity.Customer">
+        insert into customer (name) values (#{name})
+    </insert>
 </mapper>
