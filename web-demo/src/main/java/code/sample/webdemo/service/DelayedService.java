@@ -1,12 +1,9 @@
 package code.sample.webdemo.service;
 
 import code.sample.webdemo.dto.User;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-
 import org.springframework.stereotype.Service;
-
 import reactor.core.publisher.Mono;
 
 import java.time.Duration;
@@ -22,14 +19,14 @@ public class DelayedService {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-        return new User(id, "John Doe");
+        return User.builder().id(id).build();
     }
 
     // Non-blocking method for use in the Spring Reactive Web controller
     public Mono<User> findUserByIdNio(Long id) {
         log.info("Starting non-blocking operation...");
         return Mono.delay(Duration.ofSeconds(5))
-                .doOnNext(i -> log.info("Non-blocking operation finished."))
-                .map(i -> new User(id, "John Doe"));
+            .doOnNext(i -> log.info("Non-blocking operation finished."))
+            .map(i -> User.builder().id(id).name("John Doe").build());
     }
 }

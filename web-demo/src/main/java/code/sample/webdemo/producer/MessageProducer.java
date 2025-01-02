@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class MessageProducer {
-    @Value("${root.some-value}")
+    @Value("${root.some-value:null value, please set it in application.yaml}")
     private String someValue;
 
     private final ObjectMapper objectMapper;
