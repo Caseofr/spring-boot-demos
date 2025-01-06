@@ -15,7 +15,7 @@ public class DelayedService {
     public User findUserById(Long id) {
         // Simulate fetching from a database
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }

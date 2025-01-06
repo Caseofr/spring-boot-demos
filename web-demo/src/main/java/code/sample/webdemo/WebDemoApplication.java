@@ -11,8 +11,10 @@ public class WebDemoApplication {
     }
 //    public static void main(String[] args) throws Exception {
 //        String str = "some shit to be masked, then log";
+//        String strInJSON = "{\"key1\":\"some key\"}";
 //
 //        ObjectMapper om = new ObjectMapper();
 //        System.out.println(om.writeValueAsString(str));
+//        System.out.println(om.readTree(strInJSON).toPrettyString());
 //    }
 }
